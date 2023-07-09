@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-contract Error {
+contract ErrorHandling {
     uint public num = 2;
 
     function testRequire(uint _i) public pure {
@@ -26,3 +26,4 @@ contract Error {
     
         assert(num != 0);
     }
+}
