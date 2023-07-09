@@ -14,26 +14,14 @@ This contract is using the MIT License.
 
 The `ErrorHandling` contract provides the following functions:
 
-### `testAssert(uint num)`
+### testRequire
+The testRequire function takes an input parameter _i and checks if it is greater than 10 using the require statement. If the condition evaluates to false, it throws an exception with the error message "Input must be greater than 10".
 
-- This function demonstrates the usage of the `assert` function.
-- It takes a `num` parameter and checks if it is not equal to zero using the `assert` statement.
-- If the condition fails, it triggers an "Internal error" and aborts the execution.
+### testRevert
+The testRevert function also takes an input parameter _i and checks if it is smaller than or equal to 5. If the condition evaluates to true, it reverts the transaction with the error message "Input must not be smaller than 5". This function demonstrates the usage of the revert statement for handling more complex conditions.
 
-### `divide(uint _numerator, uint _denominator)`
-
-- This function demonstrates the usage of the `revert` function.
-- It takes `_numerator` and `_denominator` parameters and performs division.
-- If the `_numerator` is less than `_denominator`, it reverts the transaction with a custom error message stating that the numerator should be greater than the denominator.
-- If the condition is met, it returns the result of the division.
-
-### `mult(uint a)`
-
-- This function demonstrates the usage of the `require` function.
-- It takes an `a` parameter and performs multiplication with a predefined constant `b`.
-- It first checks if `a` is greater than zero using the `require` statement.
-- If the condition fails, it reverts the transaction with a custom error message stating that the value of `a` should not be zero.
-- If the condition is met, it returns the result of the multiplication.
+### testAssert
+The testAssert function is a view function that checks if the variable num is not equal to 0 using the assert statement. If the condition evaluates to false, it indicates an internal error. The assert statement is typically used for debugging purposes and should not be relied upon for regular error handling.
 
 ## Usage
 
