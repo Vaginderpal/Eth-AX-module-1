@@ -17,6 +17,7 @@ The `ErrorHandling` contract provides the following functions:
 ### testRequire
 1. The testRequire function takes an input parameter _i and checks if it is greater than 10 using the require statement. 
 2. If the condition evaluates to false, it throws an exception with the error message "Input must be greater than 10".
+3. conditions before execution return values from calls to other functions.
 
 ### testRevert
 1. The testRevert function also takes an input parameter _i and checks if it is smaller than or equal to 5. 
@@ -26,7 +27,7 @@ The `ErrorHandling` contract provides the following functions:
 ### testAssert
 1. The testAssert function is a view function that checks if the variable num is not equal to 0 using the assert statement.
 2. If the condition evaluates to false, it indicates an internal error.
-3. The assert statement is typically used for debugging purposes and should not be relied upon for regular error handling.
+3. Here we assert that num is always equal to 0, since it is impossible to update the value of num.
 
 ## Usage
 
