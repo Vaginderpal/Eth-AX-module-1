@@ -27,7 +27,6 @@ The `ErrorHandling` contract provides the following functions:
 ### testAssert
 1. The testAssert function is a view function that checks if the variable num is not equal to 0 using the assert statement.
 2. If the condition evaluates to false, it indicates an internal error.
-3. Here we assert that num is always equal to 0, since it is impossible to update the value of num.
 
 ## Usage
 
